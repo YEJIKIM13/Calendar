@@ -24,18 +24,12 @@ import java.util.Scanner;
 		System.out.println("반복횟수를 입력하세요.");
 		int count = scanner.nextInt();
 		
-		System.out.println();
-		
-		System.out.println("월을 입력하세요.");
-		for(int i = 1; i <= count; i++) {
-			System.out.println(i);
+		for (int i = 0; i < count; i++) {
+			System.out.println("달을 입력하세요");
+			int month = scanner.nextInt();
+			System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(month));
 		}
-		
-		System.out.println();
-		
-		for(int i = 1; i <= count; i++) {
-			System.out.printf("%d월은 %d일까지 있습니다.\n", i, cal.getMaxDaysOfMonth(i));
-		}
+		System.out.println("Bye!");
 		scanner.close();
 	}
 
