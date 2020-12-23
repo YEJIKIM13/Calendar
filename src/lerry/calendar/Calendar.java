@@ -17,15 +17,25 @@ import java.util.Scanner;
 			System.out.println("22 23 24 25 26 27 28");
 		}
 	public static void main(String[] args) {
-		//숫자를 입력받아 해당하는 달의 최대 일수를 출력하는 프로그램
+		//숫자를 입력받아 해당하는 달의 최대 일수를 출력하는 프로그램 + 반복
 		
 		Scanner scanner = new Scanner(System.in);
 		Calendar cal = new Calendar();
-		System.out.println("달을 입력하세요.");
-		int month = scanner.nextInt();
+		System.out.println("반복횟수를 입력하세요.");
+		int count = scanner.nextInt();
 		
-		System.out.printf("%d월은 %d일까지 있습니다.", month, cal.getMaxDaysOfMonth(month));
+		System.out.println();
 		
+		System.out.println("월을 입력하세요.");
+		for(int i = 1; i <= count; i++) {
+			System.out.println(i);
+		}
+		
+		System.out.println();
+		
+		for(int i = 1; i <= count; i++) {
+			System.out.printf("%d월은 %d일까지 있습니다.\n", i, cal.getMaxDaysOfMonth(i));
+		}
 		scanner.close();
 	}
 
