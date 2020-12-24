@@ -13,16 +13,20 @@ public class Prompt {
 		
 		int month = 0;
 		while (true) {
-			System.out.println("월을 입력하세요");
-			System.out.print(prompt);
+			System.out.println("연도를 입력하세요");
+			System.out.print("YEAR> ");
+			int year = scanner.nextInt();
+			
+			System.out.println("달을 입력하세요");
+			System.out.print("MONTH> ");
 			month = scanner.nextInt();
 			if(month == -1) {
 				break;
 			}
 			if(month > 12) {
 				continue;
-			}
-			cal.printSampleCalendar(2021, month);
+			} 
+			cal.printSampleCalendar(year, month);
 			
 		}
 		System.out.println("Bye~");
